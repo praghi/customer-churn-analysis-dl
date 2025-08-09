@@ -1,0 +1,7 @@
+tensorflow 
+keras 
+fastapi 
+unicorn 
+streamlit
+pandas 
+scikit-learn
