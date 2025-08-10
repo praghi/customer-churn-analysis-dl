@@ -1,7 +1,10 @@
 tensorflow 
 keras 
 fastapi 
-unicorn 
+uvicorn[standard]
 streamlit
 pandas 
 scikit-learn
+requests
+python-dotenv
+

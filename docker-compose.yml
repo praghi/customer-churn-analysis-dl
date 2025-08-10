@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build: .   # build from current directory Dockerfile
+    image: dl-customer-churn-praghi  # tag image with this name
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app/api
+      - ./model:/app/model
+      - ./requirements.txt:/app/requirements.txt
+      - ./.env:/app/.env 
+    env_file: 
+      - .env  #
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt && uvicorn api.main:app --host 0.0.0.0 --port 8000"
